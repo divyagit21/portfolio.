@@ -1,0 +1,191 @@
+@font-face {
+    font-family: 'Canva Sans';
+    src: url('./fonts/Canva Sans/CanvaSans-Regular.otf') format('opentype');
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+body {
+    font-family: 'Canva Sans';
+    background-color: rgb(41, 41, 41);
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    gap: 15px;
+    font-size: 20px;
+    justify-content: flex-end;
+    padding: 5px;
+
+}
+
+.navbar .items {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.navbar .items:hover {
+    background-color: darkred;
+
+}
+
+.about-me {
+    color: white;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.about {
+    text-align: justify;
+}
+
+.matter {
+    display: flex;
+    color: white;
+    gap: 10px;
+    font-size: 25px;
+    top: 1%;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 52px;
+    position: absolute;
+}
+
+.profile, .about {
+    flex: 1;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    height: 20px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        font-size: 16px;
+        gap: 15px; 
+    }
+
+    .matter {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 2px;
+    }
+
+    .download{
+            flex-direction: column;
+    }
+
+    .scrolling {
+        font-size: 20%;
+    }
+}
+@media (min-width: 769px) {
+    .scrolling {
+        font-size: 20px;
+    }
+}
+
+.scrolling {
+    width: 100%;
+    overflow: hidden;
+    color: white;
+    font-size: 25px;
+    position: relative;
+    margin-bottom: 3%;
+}
+
+.scroll{
+    margin-top: 0%;
+    position: absolute;
+
+}
+
+.scrolling div {
+    display: inline-block;
+    width: 300%;
+    white-space: nowrap;
+    position: relative;
+    animation: scroll 40s linear infinite;
+}
+
+.scrolling span {
+    display: inline-block;
+    word-spacing: 50px;
+    margin-right: 50px;
+    width: 100%;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-300%);
+    }
+}
+
+.textanimate {
+    display: inline-flex;
+    margin-left: 70px;
+    position: relative;
+    color: white;
+    font-size: 3em;
+    margin-top: -70px;
+
+}
+.static-type{
+    top: -25px;
+    position: absolute;
+}
+.textanimate .dynamic-type {
+    margin-left: -45px;
+    overflow: hidden;
+    height: 80px;
+    line-height: 90px;
+    list-style: none;
+}
+
+.dynamic-type li{
+    position: relative;
+    top: 0px;
+    animation: slide 12s steps(3) infinite;
+}
+
+@keyframes slide {
+    100%{
+      top: -270px; 
+    }
+  }
+
+.textanimate .dynamic-type li span::after {
+    content: "|";
+    position: absolute;
+    left:0; 
+    background:rgb(41, 41, 41);
+    animation: typing 4s steps(20) infinite;
+    width: 100%;
+}
+@keyframes typing{
+    40%, 60%{
+        left: calc(100% + 30px);
+      }
+      100%{
+        left: 0;
+      }
+}

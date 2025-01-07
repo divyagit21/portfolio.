@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'Canva Sans';
+    src: url('./fonts/Canva Sans/CanvaSans-Regular.otf') format('opentype');
+}
+
+body {
+    font-family: 'Canva Sans', sans-serif;
+    background-color: rgb(41, 41, 41);
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    gap: 15px;
+    font-size: 20px;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+.navbar .items {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.navbar .items:hover {
+    background-color: darkred;
+}
+
+.footer {
+    position: relative;
+    bottom: -20px;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.certificates {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-left: 100px;
+}
+
+.certificates img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.certificates img:hover {
+    width: 100%;
+    box-shadow: 0cqmax;
+}
+
+.name1,
+.name2,
+.name3,
+.name4 {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    height: 50px;
+    margin-top: 0px;
+    background-color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .certificates {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .names{
+        font-size: 12px;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.name2 {
+    animation: sliding2 3s linear forwards;
+}
+
+.name3 {
+    animation: sliding3 3s linear 1s forwards;
+}
+
+.name4 {
+    animation: sliding4 3s linear 2s forwards;
+}
+
+@keyframes sliding2 {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(30%);
+    }
+}
+
+@keyframes sliding3 {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(60%);
+    }
+}
+
+@keyframes sliding4 {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(90%);
+    }
+}

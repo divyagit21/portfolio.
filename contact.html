@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="items"><a href="index.html">Home</a></div>
+        <div class="items"><a href="resume.html">Resume</a></div>
+        <div class="items"><a href="certificates.html">Certificates</a></div>
+        <div class="items"><a href="projects.html">Projects</a></div>
+        <div class="items"><a href="contact.html">Contact</a></div>
+    </div>
+    <section>
+
+        <div class="container">
+            <div class="section-header">
+                <div class="container">
+                    <h2>Contact Us</h2>
+                    <p>Thank you for visiting my portfolio! I’m always excited to connect with others. Whether you have
+                        a question, want to give feedback, or are interested in working together, feel free to reach
+                        out.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>Address</h4>
+                            <p>Proddatur , Kadapa , Andhra Pradesh 516312</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>Phone</h4>
+                            <p>+91 62819-11878</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>Email</h4>
+                            <p>mittasaidivya21@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form" onsubmit="sendEmail(event)">
+                        <h2>Send Message</h2>
+
+                        <div class="input-box">
+                            <input type="text" id="full-name" name="name" required="true" placeholder="Full Name">
+                            <span>Full Name</span>
+                        </div>
+
+                        <div class="input-box">
+                            <input type="email" id="email" name="email" required="true" placeholder="Email">
+                            <span>Email</span>
+                        </div>
+
+                        <div class="input-box">
+                            <textarea id="message" name="message" required="true" placeholder="Message"></textarea>
+                            <span>Type your Message...</span>
+                        </div>
+
+                        <div class="input-box">
+                            <input type="submit" value="Send">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer">
+        <p>All Rights Reserved &copy;2024</p>
+    </div>
+    <script>
+        function sendEmail(event) {
+            event.preventDefault();
+            var name = document.getElementById('full-name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            if (!name || !email || !message) {
+                alert("Please fill in all fields.");
+                return;
+            }
+            var emailBody = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+            var recipientEmail = "your-email@example.com";
+            var mailtoLink = `mailto:${recipientEmail}?subject=New Contact Form Message&body=${encodeURIComponent(emailBody)}`;
+            window.location.href = mailtoLink;
+        }
+
+    </script>
+</body>
+
+</html>

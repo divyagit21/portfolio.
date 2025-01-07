@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Canva Sans';
+    src: url('./fonts/Canva Sans/CanvaSans-Regular.otf') format('opentype');
+}
+
+body {
+    font-family: 'Canva Sans', sans-serif;
+    background-color: rgb(41, 41, 41);
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    gap: 15px;
+    font-size: 20px;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+.navbar .items {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.navbar .items:hover {
+    background-color: darkred;
+}
+
+.footer {
+    position:absolute;
+    bottom: -205px;
+    width: 100%;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.cont1 {
+    background-color: white;
+    width: 50%;
+    margin: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px; 
+}
+
+.cont1 h2 {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px; 
+}
+
+.matter ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.matter li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px; 
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar {
+        font-size: 16px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer {
+        font-size: 25px;
+    }
+
+    .cont1 {
+        width: 90%;
+    }
+}
